@@ -139,9 +139,10 @@
           flex-direction: column;
           justify-content: center;
           align-items: center;
-gap: 10px;
+          gap: 10px;
+          
 
-          P{
+          P {
             font-size: 14px;
           }
 
@@ -211,7 +212,7 @@ gap: 10px;
             gap: 10px;
             background-color: white;
             // box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.205);
-            overflow: hidden;
+            // overflow: hidden;
             border-radius: 20px;
 
             .icon {
@@ -219,12 +220,13 @@ gap: 10px;
               justify-content: center;
               align-items: center;
               padding: 10px;
-             
-              border-radius: 50%;
+               border: 1px solid rgb(255, 115, 0);
+            //   border-radius: 50%;
+            border-radius: 10px;
 
               svg {
-                color:  rgb(255, 115, 0);
-                font-size: 24px;
+                color: rgb(255, 115, 0);
+                font-size: 20px;
               }
             }
 

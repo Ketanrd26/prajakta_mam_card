@@ -14,7 +14,7 @@ import { FaXTwitter } from "react-icons/fa6";
 import { TfiWorld } from "react-icons/tfi";
 import { TfiFacebook } from "react-icons/tfi";
 import { FaLinkedinIn } from "react-icons/fa";
-
+import { IoMailOutline } from "react-icons/io5";
 import { IoCall } from "react-icons/io5";
 const Card = () => {
   const [data, setData] = useState({
@@ -177,7 +177,7 @@ END:VCARD`;
                       <TfiWorld />
                     </div>
                     <a href="https://www.diwiseglobal.com/" target="blank">
-                      https://www.diwiseglobal.com/
+                      diwiseglobal.com
                     </a>
                   </div>
                   <div class="insta cont">
@@ -185,7 +185,7 @@ END:VCARD`;
                       <TfiWorld />
                     </div>
                     <a href="https://www.diwise.in/" target="blank">
-                      https://www.diwise.in/
+                      diwise.in
                     </a>
                   </div>
                   <div class="insta cont">
@@ -193,7 +193,7 @@ END:VCARD`;
                       <TfiWorld />
                     </div>
                     <a href="https://diwise.uk/" target="blank">
-                      https://diwise.uk/
+                      diwise.uk
                     </a>
                   </div>
                 </div>
@@ -210,7 +210,7 @@ END:VCARD`;
                   </div>
                   <div class="insta cont">
                     <div class="icon">
-                      <TfiWorld />
+                      <IoMailOutline />
                     </div>
                     <a href="mailto:prajakta.marwaha@gmail.com" target="blank">
                       prajakta.marwaha@gmail.com
@@ -221,7 +221,7 @@ END:VCARD`;
                       <TfiWorld />
                     </div>
                     <a href="https://prajaktamarwaha.com/" target="blank">
-                      https://prajaktamarwaha.com/
+                    prajaktamarwaha.com
                     </a>
                   </div>
                 </div>
