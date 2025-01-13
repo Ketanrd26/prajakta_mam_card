@@ -35,6 +35,38 @@ const Card = () => {
     }));
   };
 
+  const saveContact = () => {
+    // vCard content
+    const vCardData = `
+BEGIN:VCARD
+VERSION:3.0
+FN:Prajakta Marwaha
+ORG:Prajakta Marwaha
+TITLE:Founder and CEO
+TEL:+918007232222
+EMAIL:prajakta.marwaha@gmail.com
+URL:https://prajaktamarwaha.com/
+URL:https://www.diwiseglobal.com/
+URL:https://www.diwise.in/
+URL:https://diwise.uk/
+END:VCARD`;
+
+    // Create a Blob for the vCard file
+    const blob = new Blob([vCardData], { type: "text/vcard" });
+
+    // Create a link element
+    const link = document.createElement("a");
+    link.href = URL.createObjectURL(blob);
+    link.download = "Prajakta_Marwaha.vcf"; // vCard file name
+    document.body.appendChild(link);
+
+    // Trigger the download
+    link.click();
+
+    // Cleanup
+    document.body.removeChild(link);
+  };
+
   return (
     <>
       <div class="card_parent">
@@ -46,7 +78,7 @@ const Card = () => {
               <h4>Prajakta Marwaha</h4>
               <p>Founder and CEO</p>
 
-              <div class="btn">Save Contact</div>
+              <div class="btn" onClick={saveContact} >Save Contact</div>
             </div>
           </div>
           <div class="bottom_section">
@@ -58,15 +90,24 @@ const Card = () => {
                 <img src={social} alt="" />
                 <p>Social</p>
               </div>
-              <div class={data.websites ? "active icon " : "icon"} onClick={() => openWithIndex("websites")}>
+              <div
+                class={data.websites ? "active icon " : "icon"}
+                onClick={() => openWithIndex("websites")}
+              >
                 <img src={website} alt="" />
                 <p>Website</p>
               </div>
-              <div class={data.brochure ? "active icon " : "icon"} onClick={() => openWithIndex("brochure")}>
+              <div
+                class={data.brochure ? "active icon " : "icon"}
+                onClick={() => openWithIndex("brochure")}
+              >
                 <img src={brochure} alt="" />
                 <p>Brochure</p>
               </div>
-              <div class={data.contact ? "active icon " : "icon"} onClick={() => openWithIndex("contact")}>
+              <div
+                class={data.contact ? "active icon " : "icon"}
+                onClick={() => openWithIndex("contact")}
+              >
                 <img src={contact} alt="" />
                 <p>Contact</p>
               </div>
@@ -105,7 +146,7 @@ const Card = () => {
                       href="https://www.linkedin.com/in/prajakta-marwaha-507b6410a"
                       target="blank"
                     >
-                   prajakta-marwaha
+                      prajakta-marwaha
                     </a>
                   </div>
                   <div class="insta cont">
@@ -124,7 +165,7 @@ const Card = () => {
                       <FaXTwitter />
                     </div>
                     <a href="https://x.com/MarwahaPrajakta?mx=2" target="blank">
-                     MarwahaPrajakta
+                      MarwahaPrajakta
                     </a>
                   </div>
                 </div>
