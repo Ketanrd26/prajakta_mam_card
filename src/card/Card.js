@@ -16,12 +16,22 @@ import { TfiFacebook } from "react-icons/tfi";
 import { FaLinkedinIn } from "react-icons/fa";
 import { IoMailOutline } from "react-icons/io5";
 import { IoCall } from "react-icons/io5";
+
+
+
+// logo
+import nvm_logo from "../../src/assets/nvm_logo.webp"
+import pan_logo from "../../src/assets/pan_logo.png"
+import onkar_logo from "../../src/assets/onkar_logo.webp"
+import tij_logo from "../../src/assets/tij_logo.webp"
+import akka_logo from "../../src/assets/akka_logo.webp"
+import diwise_logo from "../../src/assets/diwise.webp"
 const Card = () => {
   const [data, setData] = useState({
     social: false,
     websites: false,
     contact: true,
-    brochure: false,
+    companies: false,
   });
 
   const openWithIndex = (key) => {
@@ -30,7 +40,7 @@ const Card = () => {
       social: false,
       websites: false,
       contact: false,
-      brochure: false,
+      companies: false,
       [key]: true,
     }));
   };
@@ -67,6 +77,39 @@ END:VCARD`;
     document.body.removeChild(link);
   };
 
+  const companies = [
+    {
+      icon: diwise_logo,
+      website_url: "https://www.diwiseglobal.com/",
+      website_text: "Diwise Global",
+    },
+    {
+      icon: nvm_logo,
+      website_url: "https://nvminfratech.com/",
+      website_text: "Nvm Infratech",
+    },
+    {
+      icon: akka_logo,
+      website_url: "https://akkafoundation.in/",
+      website_text: "Akka Foundation",
+    },
+    {
+      icon: pan_logo,
+      website_url: "https://pandozasolutions.com/",
+      website_text: "Pandoza Solutions",
+    },
+    {
+      icon: onkar_logo,
+      website_url: "https://www.onkarworld.com/",
+      website_text: "Onkar World",
+    },
+    {
+      icon: tij_logo,
+      website_url: "https://www.theindianjourney.com/",
+      website_text: "The Indian Journey",
+    },
+  ];
+
   return (
     <>
       <div class="card_parent">
@@ -78,38 +121,43 @@ END:VCARD`;
               <h4>Prajakta Marwaha</h4>
               <p>Founder and CEO</p>
 
-              <div class="btn" onClick={saveContact} >Save Contact</div>
+              <div class="btn" onClick={saveContact}>
+                Save Contact
+              </div>
             </div>
           </div>
           <div class="bottom_section">
             <div class="tabs">
-              <div
-                class={data.social ? "active icon " : "icon"}
-                onClick={() => openWithIndex("social")}
-              >
-                <img src={social} alt="" />
-                <p>Social</p>
-              </div>
-              <div
-                class={data.websites ? "active icon " : "icon"}
-                onClick={() => openWithIndex("websites")}
-              >
-                <img src={website} alt="" />
-                <p>Website</p>
-              </div>
-              <div
-                class={data.brochure ? "active icon " : "icon"}
-                onClick={() => openWithIndex("brochure")}
-              >
-                <img src={brochure} alt="" />
-                <p>Brochure</p>
-              </div>
               <div
                 class={data.contact ? "active icon " : "icon"}
                 onClick={() => openWithIndex("contact")}
               >
                 <img src={contact} alt="" />
                 <p>Contact</p>
+              </div>
+
+              <a
+                href="https://prajaktamarwaha.com/"
+                target="blank"
+                class={data.websites ? "active icon " : "icon"}
+                // onClick={() => openWithIndex("websites")}
+              >
+                <img src={website} alt="" />
+                <p>Website</p>
+              </a>
+              <div
+                class={data.companies ? "active icon " : "icon"}
+                onClick={() => openWithIndex("companies")}
+              >
+                <img src={brochure} alt="" />
+                <p>Companies</p>
+              </div>
+              <div
+                class={data.social ? "active icon " : "icon"}
+                onClick={() => openWithIndex("social")}
+              >
+                <img src={social} alt="" />
+                <p>Social</p>
               </div>
             </div>
 
@@ -170,32 +218,18 @@ END:VCARD`;
                   </div>
                 </div>
               )}
-              {data.websites && (
+              {data.companies && (
                 <div class="social_medi">
-                  <div class="insta cont">
-                    <div class="icon">
-                      <TfiWorld />
+                  {companies.map((item, index) => (
+                    <div class="insta cont" key={index} >
+                      <div class="icon">
+                        <img src={item.icon} alt=""/>
+                      </div>
+                      <a href={item.website_url} target="blank">
+                        {item.website_text}
+                      </a>
                     </div>
-                    <a href="https://www.diwiseglobal.com/" target="blank">
-                      diwiseglobal.com
-                    </a>
-                  </div>
-                  <div class="insta cont">
-                    <div class="icon">
-                      <TfiWorld />
-                    </div>
-                    <a href="https://www.diwise.in/" target="blank">
-                      diwise.in
-                    </a>
-                  </div>
-                  <div class="insta cont">
-                    <div class="icon">
-                      <TfiWorld />
-                    </div>
-                    <a href="https://diwise.uk/" target="blank">
-                      diwise.uk
-                    </a>
-                  </div>
+                  ))}
                 </div>
               )}
               {data.contact && (
@@ -221,7 +255,7 @@ END:VCARD`;
                       <TfiWorld />
                     </div>
                     <a href="https://prajaktamarwaha.com/" target="blank">
-                    prajaktamarwaha.com
+                      prajaktamarwaha.com
                     </a>
                   </div>
                 </div>
