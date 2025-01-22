@@ -239,8 +239,16 @@ END:VCARD`;
                     <div class="icon">
                       <IoCall />
                     </div>
+                    <a href="tel:+918007232222" target="blank">
+                    +91 8007232222
+                    </a>
+                  </div>
+                  <div class="insta cont">
+                    <div class="icon">
+                      <IoCall />
+                    </div>
                     <a href="tel:+971508060418" target="blank">
-                    +971508060418
+                    +971 50 806 0418
                     </a>
                   </div>
                   <div class="insta cont">
