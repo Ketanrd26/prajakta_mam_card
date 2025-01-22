@@ -16,7 +16,7 @@ import { TfiFacebook } from "react-icons/tfi";
 import { FaLinkedinIn } from "react-icons/fa";
 import { IoMailOutline } from "react-icons/io5";
 import { IoCall } from "react-icons/io5";
-
+import image_collage from "../../src/assets/loog_collage.webp"
 
 
 // logo
@@ -53,7 +53,7 @@ VERSION:3.0
 FN:Prajakta Marwaha
 ORG:Prajakta Marwaha
 TITLE:Founder and CEO
-TEL:+918007232222
+TEL:+971508060418
 EMAIL:prajakta.marwaha@gmail.com
 URL:https://prajaktamarwaha.com/
 URL:https://www.diwiseglobal.com/
@@ -84,9 +84,9 @@ END:VCARD`;
       website_text: "Diwise Global",
     },
     {
-      icon: nvm_logo,
-      website_url: "https://nvminfratech.com/",
-      website_text: "Nvm Infratech",
+      icon: onkar_logo,
+      website_url: "https://www.onkarworld.com/",
+      website_text: "Onkar World",
     },
     {
       icon: akka_logo,
@@ -98,10 +98,11 @@ END:VCARD`;
       website_url: "https://pandozasolutions.com/",
       website_text: "Pandoza Solutions",
     },
+   
     {
-      icon: onkar_logo,
-      website_url: "https://www.onkarworld.com/",
-      website_text: "Onkar World",
+      icon: nvm_logo,
+      website_url: "https://nvminfratech.com/",
+      website_text: "Nvm Infratech",
     },
     {
       icon: tij_logo,
@@ -120,7 +121,7 @@ END:VCARD`;
               <div class="image"></div>
               <h4>Prajakta Marwaha</h4>
               <p>Founder and CEO</p>
-
+                <img src={image_collage} alt=""/>
               <div class="btn" onClick={saveContact}>
                 Save Contact
               </div>
@@ -238,8 +239,8 @@ END:VCARD`;
                     <div class="icon">
                       <IoCall />
                     </div>
-                    <a href="tel:+918007232222" target="blank">
-                      +918007232222
+                    <a href="tel:+971508060418" target="blank">
+                    +971508060418
                     </a>
                   </div>
                   <div class="insta cont">
