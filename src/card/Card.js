@@ -16,7 +16,7 @@ import { TfiFacebook } from "react-icons/tfi";
 import { FaLinkedinIn } from "react-icons/fa";
 import { IoMailOutline } from "react-icons/io5";
 import { IoCall } from "react-icons/io5";
-import image_collage from "../../src/assets/loog_collage.webp"
+import image_collage from "../../src/assets/loog_collage.png"
 
 
 // logo
@@ -26,6 +26,7 @@ import onkar_logo from "../../src/assets/onkar_logo.webp"
 import tij_logo from "../../src/assets/tij_logo.webp"
 import akka_logo from "../../src/assets/akka_logo.webp"
 import diwise_logo from "../../src/assets/diwise.webp"
+import nvmAgro_logo from "../assets/nvm_agro_logo.png"
 const Card = () => {
   const [data, setData] = useState({
     social: false,
@@ -84,9 +85,9 @@ END:VCARD`;
       website_text: "Diwise Global",
     },
     {
-      icon: onkar_logo,
-      website_url: "https://www.onkarworld.com/",
-      website_text: "Onkar World",
+      icon: nvm_logo,
+      website_url: "https://nvmagro.com/",
+      website_text: "NVM Agro",
     },
     {
       icon: akka_logo,
